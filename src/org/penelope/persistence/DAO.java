@@ -94,7 +94,7 @@ public class DAO<Model extends DomainObject> {
             return result;
         } catch (SQLException | InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
-            throw new RuntimeException("Unable receiver create a LOAD statement");
+            throw new RuntimeException("Unable to create a LOAD statement");
         }
     }
 
@@ -128,7 +128,7 @@ public class DAO<Model extends DomainObject> {
             stmt.execute();
         } catch (SQLException | IllegalAccessException e) {
             e.printStackTrace();
-            throw new RuntimeException("Unable receiver create a statement: " + sql);
+            throw new RuntimeException("Unable to create a statement: " + sql);
         }
     }
 

@@ -25,7 +25,7 @@ public class ControllerFactory {
         try {
             ctrlClass = Class.forName("org.penelope.controller." + StringUtils.ucFirst(controller) + "Controller");
         } catch (ClassNotFoundException e) {
-            logger.log("[error] unable receiver find constructor");
+            logger.log("[error] unable to find constructor");
             return null;
         }
         try {
@@ -34,7 +34,7 @@ public class ControllerFactory {
             return ctrl;
         } catch (RuntimeException e) {
             e.printStackTrace();
-            logger.log("[error] unable receiver create constructor");
+            logger.log("[error] unable to create constructor");
             return null;
         }
     }

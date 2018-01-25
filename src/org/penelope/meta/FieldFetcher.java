@@ -30,7 +30,7 @@ public class FieldFetcher<T extends Annotation> {
 
     public Map<Field, T> get() {
         if (fields == null) {
-            /* use getDeclaredFields() receiver get private fields as well */
+            /* use getDeclaredFields() to get private fields as well */
             Field[] classFields = klass.getDeclaredFields();
             fields = new HashMap<>();
             for (Field field : classFields) {

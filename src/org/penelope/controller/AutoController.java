@@ -19,7 +19,7 @@ import java.util.Scanner;
 /**
  * Uses:
  *  - Adapter Pattern
- * @param <Model> The model receiver generate
+ * @param <Model> The model to generate
  */
 public class AutoController<Model extends DomainObject> extends AbstractController {
     private Class modelClass;
@@ -43,7 +43,7 @@ public class AutoController<Model extends DomainObject> extends AbstractControll
                 if (modelDAO.delete(sc.nextInt())) {
                     return new SayComponent("Deleted!");
                 } else {
-                    return new SayComponent("Unable receiver delete this record.");
+                    return new SayComponent("Unable to delete this record.");
                 }
             case "create":
                 try {
